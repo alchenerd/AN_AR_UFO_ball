@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<TrackingData>
+<Sensors>
+    <Sensor type="MarkerBasedSensorSource"> 
+        <SensorID>MarkerTracking</SensorID>
+        <Parameters> 
+            <MarkerTrackingParameters>
+                <trackingQuality>robust</trackingQuality>
+                <thresholdOffset>110</thresholdOffset>
+            </MarkerTrackingParameters>
+        </Parameters>
+        <SensorCOS>
+            <SensorCosID>Marker20</SensorCosID>
+            <Parameters>
+                <MarkerParameters>
+                    <Size>60.0</Size>
+                    <MatrixID>1</MatrixID>
+                </MarkerParameters>
+            </Parameters>
+        </SensorCOS>
+    </Sensor>
+</Sensors>  
+</TrackingData>

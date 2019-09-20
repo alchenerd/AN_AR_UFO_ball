@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<TrackingData>
+    <Sensors>
+        <Sensor type="Extensible">
+            <SensorID>ExtensibleSensor1</SensorID>
+            <Parameters>
+                <ExtensibleSensor type="FeatureBasedSensorSource" subtype="ML3D">
+                    <SensorID>FeatureTracking1</SensorID>
+                    <Parameters>
+                        <FeatureDescriptorAlignment>regular</FeatureDescriptorAlignment>
+                    </Parameters>
+                </ExtensibleSensor>
+            </Parameters>
+
+            <SensorCOS>
+                <SensorCosID>MarkerCOS</SensorCosID>
+                <Parameters>
+                    <!-- This tracking.xml is used to extend the 3D map -->
+                    <TrackingConfiguration>MarkerTracking.xml</TrackingConfiguration>
+                </Parameters>
+            </SensorCOS>
+
+            <SensorCOS>
+                <SensorCosID>Map3D</SensorCosID>
+                <Parameters>
+                    <!-- SourceSensorID to distinguish where this cos comes from -->
+                    <MinMatches>25</MinMatches>
+                    <NumExtensibleFeatures>1200</NumExtensibleFeatures>
+		    <MinTriangulationAngle>8</MinTriangulationAngle>
+                </Parameters>
+            </SensorCOS>
+        </Sensor>
+    </Sensors>
+
+    <Connections>
+
+        <COS>
+            <!-- The first cos displays the marker corrdinate system -->
+            <Name>MarkerCOS</Name>
+            <Fuser type="BestQualityFuser">
+                <Parameters />
+            </Fuser>
+            <SensorSource>
+                <SensorID>ExtensibleSensor1</SensorID>
+                <SensorCosID>MarkerCOS</SensorCosID>
+            </SensorSource>
+        </COS>
+
+        <COS>
+            <!-- The second cos displays the SLAM corrdinate system -->
+            <Name>Map3D</Name>
+            <Fuser type="BestQualityFuser">
+                <Parameters />
+            </Fuser>	
+            <SensorSource>
+                <SensorID>ExtensibleSensor1</SensorID>
+                <SensorCosID>Map3D</SensorCosID>
+            </SensorSource>
+        </COS>
+
+    </Connections>
+</TrackingData>

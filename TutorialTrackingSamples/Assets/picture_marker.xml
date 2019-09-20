@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<TrackingData>
+<Sensors>
+    <Sensor type="MarkerBasedSensorSource"> 
+        <SensorID>Markertracking1</SensorID>
+        <Parameters> 
+            <MarkerTrackingParameters>
+                <trackingQuality>robust</trackingQuality>
+                <thresholdOffset>110</thresholdOffset>
+            </MarkerTrackingParameters>
+        </Parameters>
+        <SensorCOS>
+            <SensorCosID>Marker1</SensorCosID>
+            <Parameters>
+                <MarkerParameters>
+                    <Size>60.0</Size>
+                    <referenceImage qualityThreshold="0.70">glue_picture_marker_2.png</referenceImage>
+                </MarkerParameters>
+            </Parameters>
+        </SensorCOS>
+    </Sensor>
+</Sensors>  
+</TrackingData>

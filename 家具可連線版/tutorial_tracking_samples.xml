@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone" >
+
+    <ImageButton
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:onClick="onButtonClick"
+        android:src="@drawable/cancel" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp" 
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#DDDDDD">
+
+        <ImageButton
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="but2_onClick"
+            android:src="@drawable/camera_icon"
+             android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            />
+        <ImageButton
+            android:id="@+id/idButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="onIdButtonClick"
+            android:src="@drawable/folder_icon"
+             android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            />
+
+        <ImageButton
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="but3_onClick"
+            android:src="@drawable/bulb_icon"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            />
+    </LinearLayout>
+
+</RelativeLayout>
